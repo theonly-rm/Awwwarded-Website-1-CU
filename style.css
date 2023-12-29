@@ -12,6 +12,7 @@ html, body {
 
 #main {
     width: 100%;
+    background-color: black;
 }
 
 .hero {
