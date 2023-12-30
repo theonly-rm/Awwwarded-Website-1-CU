@@ -32,6 +32,7 @@ html, body {
 #main {
     width: 100%;
     background-color: black;
+    position: relative;
 }
 
 .hero {
@@ -49,6 +50,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     color: white;
+    position: sticky;
 }
 
 .nav a {
@@ -97,7 +99,6 @@ html, body {
     align-items: end;
     justify-content: center;
     font-weight: 600;
-
 }
 
 .smallheadings h5 {
@@ -142,39 +143,43 @@ html, body {
 
 .second-hero {
     background-color: black;
-    padding-top: 120px;
-    padding-bottom: 50px;
-}
-.projects {
-    background-color: black;
+    padding: 120px 0 50px 40px;
     color: white;
     width: 93%;
     height: 100vh;
-    padding: 40px;
+    
 }
 
-.project-flex {
-    position: relative;
+.elem {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3.5vw 0;
+    border-top: 1px solid #888;
+    position: relative;
 }
 
-.projects h1 {
+
+.elem-last {
+    border-bottom: 1px solid #888;
+}
+
+.second-hero h1 {
     font-size: 7vw;
     opacity: 0.7;
 }
 
-.projects h5{
+.second-hero h5{
     font-size: 1vw;
 }
 
-.projects img {
+.second-hero img {
     position: absolute;
     height: 140%;
     z-index: 999;
-    display: none;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 .third-hero {
@@ -198,7 +203,6 @@ html, body {
 
 .about img {
     width: 30%;
-
 }
 
 .about a {
