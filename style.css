@@ -19,6 +19,16 @@ html, body {
     background-color: white;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.boundingelem {
+    transform: translateY(100%);
+}
+
 #main {
     width: 100%;
     background-color: black;
@@ -61,22 +71,26 @@ html, body {
 }
 
 .blocktext {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: end;
 
 }
 
 .blocktext h5 {
-    text-align: right;
+    text-align: right !important;
     text-transform: uppercase;
     padding-top: 15px;
     font-size: 16px;
 }
+
 .heading .secondh1 {
     margin-left: 200px;
 }
 
 .smallheadings{
-    font-size: 15px;
+    font-size: 18px;
     margin: 90px 40px 0px 40px;
     display: flex;
     flex-direction: column;
@@ -86,7 +100,7 @@ html, body {
 
 }
 
-.smallheadings a {
+.smallheadings h5 {
     text-decoration: none;
     color: white;
     margin-top: 10px;
