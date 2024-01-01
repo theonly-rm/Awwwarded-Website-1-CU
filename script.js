@@ -93,3 +93,20 @@ document.querySelectorAll(".elem").forEach(function (elem) {
 
  
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true,
+    });
+
+    const nav = document.querySelector(".nav");
+
+    scroll.on("scroll", (instance) => {
+        if (instance.scroll.y > 0) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    });
+});
